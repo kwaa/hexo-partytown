@@ -11,7 +11,7 @@ pnpm add hexo-partytown
 ## Config
 
 ```ts
-export type HexoPartytownConfig = {
+type HexoPartytownConfig = {
   // [/^https:\/\/.+\.min\.js$/i]
   match: (RegExp | string)[]
   // 'html'
