@@ -7,7 +7,6 @@
     "hexo",
     "filter",
     "plugin",
-    "hexo-plugin",
     "partytown"
   ],
   "description": "Partytown Integration for Hexo",
