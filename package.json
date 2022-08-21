@@ -1,0 +1,55 @@
+{
+  "name": "hexo-partytown",
+  "version": "0.0.1",
+  "author": "藍+85CD",
+  "license": "WTFPL",
+  "keywords": [
+    "hexo",
+    "filter",
+    "plugin",
+    "hexo-plugin",
+    "partytown"
+  ],
+  "description": "Partytown Integration for Hexo",
+  "repository": "github:kwaa/hexo-partytown",
+  "homepage": "https://github.com/kwaa/hexo-partytown",
+  "bugs": "https://github.com/kwaa/hexo-partytown/issues",
+  "type": "module",
+  "module": "./dist/index.mjs",
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "unbuild": {
+    "entries": [
+      "src/index"
+    ],
+    "clean": true,
+    "declaration": true,
+    "rollup": {
+      "emitCJS": true
+    }
+  },
+  "scripts": {
+    "preinstall": "npx -y only-allow pnpm",
+    "build": "unbuild",
+    "watch": "unbuild --stub"
+  },
+  "dependencies": {
+    "@builder.io/partytown": "^0.6.4",
+    "cheerio": "1.0.0-rc.12"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.31",
+    "@types/node": "^18.7.8",
+    "unbuild": "^0.8.9"
+  }
+}

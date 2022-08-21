@@ -1,0 +1,45 @@
+import type { HexoPartytownConfig } from './index'
+import { partytownSnippet } from '@builder.io/partytown/integration'
+import { inspect } from 'util'
+import * as cheerio from 'cheerio'
+
+const snippetText = partytownSnippet()
+
+export function hexoPartytown(result: string, _data: unknown) {
+  const {
+    config: { partytown },
+  }: { config: { partytown: HexoPartytownConfig } } = this
+  const $ = cheerio.load(result)
+
+  // Partytown Snippet
+  if (partytown.snippet === 'inline')
+    $('head').prepend(`<script>${snippetText}</script>`)
+  else if (partytown.snippet !== false)
+    $('head').prepend(`<script src="${partytown.snippet}"></script>`)
+
+  // Partytown Config
+  if (partytown.config)
+    $('head').prepend(
+      `<script>partytown={${inspect(partytown.config, {
+        compact: true,
+        depth: Infinity,
+      })}}</script>`
+    )
+
+  // Match Third-Party Script
+  $(partytown.range)
+    .find('script')
+    .each((_i, element) => {
+      const source = $(element).attr('src') ?? $(element).html()
+      if (source)
+        partytown.match.some((match) =>
+          match instanceof RegExp
+            ? match.test(source)
+            : match.startsWith('/') && match.endsWith('/')
+            ? new RegExp(match.substring(1, match.length - 1), 'i').test(source)
+            : source.includes(match)
+        ) && $(element).attr('type', 'text/partytown')
+    })
+
+  return $.html()
+}
