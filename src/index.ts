@@ -13,6 +13,7 @@ export type HexoPartytownConfig = {
 export type Hexo = {
   config: {
     partytown: HexoPartytownConfig
+    public_dir: string
   }
   readonly extend: {
     readonly filter: {
