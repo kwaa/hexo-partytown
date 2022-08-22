@@ -2,7 +2,15 @@ import type { PartytownConfig } from '@builder.io/partytown/integration'
 import { hexoPartytown } from './partytown'
 import { copyLib } from './copylib'
 
-declare const hexo: {
+export type HexoPartytownConfig = {
+  match: (RegExp | string)[]
+  range: 'head' | 'html'
+  snippet: string | false
+  copylib: boolean
+  config?: PartytownConfig
+}
+
+export type Hexo = {
   config: {
     partytown: HexoPartytownConfig
   }
@@ -16,13 +24,7 @@ declare const hexo: {
   }
 }
 
-export type HexoPartytownConfig = {
-  match: (RegExp | string)[]
-  range: 'head' | 'html'
-  snippet: string | false
-  copylib: boolean
-  config?: PartytownConfig
-}
+declare const hexo: Hexo
 
 hexo.config.partytown = {
   match: [/^https:\/\/.+\.min\.js$/i],

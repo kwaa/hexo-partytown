@@ -1,14 +1,14 @@
-import type { HexoPartytownConfig } from './index'
+import type { Hexo } from './index'
 import { partytownSnippet } from '@builder.io/partytown/integration'
 import { inspect } from 'util'
 import * as cheerio from 'cheerio'
 
 const snippetText = partytownSnippet()
 
-export function hexoPartytown(result: string, _data: unknown) {
+export function hexoPartytown(result: string) {
   const {
     config: { partytown },
-  }: { config: { partytown: HexoPartytownConfig } } = this
+  }: Hexo = this
   const $ = cheerio.load(result)
 
   // Partytown Snippet
