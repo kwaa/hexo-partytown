@@ -12,8 +12,8 @@ pnpm add hexo-partytown
 
 ```ts
 type HexoPartytownConfig = {
-  // [/^https:\/\/.+\.min\.js$/i]
-  match: (RegExp | string)[]
+  // [['^https:\/\/.+\.min\.js$', 'i']]
+  match: (string | [string, string])[]
   // 'html'
   range: string
   // 'inline'

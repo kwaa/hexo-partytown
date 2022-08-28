@@ -3,7 +3,7 @@ import { hexoPartytown } from './partytown'
 import { copyLib } from './copylib'
 
 export type HexoPartytownConfig = {
-  match: (RegExp | string)[]
+  match: (string | [string, string])[]
   range: string
   snippet: string | false
   copylib: boolean
@@ -28,7 +28,7 @@ export type Hexo = {
 declare const hexo: Hexo
 
 hexo.config.partytown = {
-  match: [/^https:\/\/.+\.min\.js$/i],
+  match: [['^https://.+.min.js$', 'i']],
   range: 'html',
   snippet: 'inline',
   copylib: true,

@@ -33,10 +33,8 @@ export function hexoPartytown(result: string) {
       const source = $(element).attr('src') ?? $(element).html()
       if (source)
         partytown.match.some((match) =>
-          match instanceof RegExp
-            ? match.test(source)
-            : match.startsWith('/') && match.endsWith('/')
-            ? new RegExp(match.substring(1, match.length - 1), 'i').test(source)
+          match instanceof Array
+            ? new RegExp(...match).test(source)
             : source.includes(match)
         ) && $(element).attr('type', 'text/partytown')
     })
