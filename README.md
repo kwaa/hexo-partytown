@@ -5,7 +5,9 @@
 ## Install
 
 ```bash
-pnpm add hexo-partytown
+pnpm add hexo-partytown # pnpm
+yarn add hexo-partytown # yarn
+npm i hexo-partytown # npm
 ```
 
 ## Config
