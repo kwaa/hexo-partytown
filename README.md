@@ -15,7 +15,7 @@ type HexoPartytownConfig = {
   // [/^https:\/\/.+\.min\.js$/i]
   match: (RegExp | string)[]
   // 'html'
-  range: 'head' | 'html'
+  range: string
   // 'inline'
   snippet: string | false
   // true

@@ -4,7 +4,7 @@ import { copyLib } from './copylib'
 
 export type HexoPartytownConfig = {
   match: (RegExp | string)[]
-  range: 'head' | 'html'
+  range: string
   snippet: string | false
   copylib: boolean
   config?: PartytownConfig
