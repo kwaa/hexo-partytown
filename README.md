@@ -26,3 +26,7 @@ type HexoPartytownConfig = {
   config?: PartytownConfig
 }
 ```
+
+## License
+
+Licensed under the [WTFPL](http://www.wtfpl.net), See the [COPYING](COPYING) file for more details.
