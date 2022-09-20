@@ -3,13 +3,12 @@ import { partytownSnippet } from '@builder.io/partytown/integration'
 import { inspect } from 'util'
 import * as cheerio from 'cheerio'
 
-const snippetText = partytownSnippet()
-
 export function hexoPartytown(result: string) {
   const {
     config: { partytown },
   }: Hexo = this
   const $ = cheerio.load(result)
+  const snippetText = partytownSnippet(partytown.config)
 
   // Partytown Snippet
   if (partytown.snippet === 'inline')
@@ -18,7 +17,7 @@ export function hexoPartytown(result: string) {
     $('head').prepend(`<script src="${partytown.snippet}"></script>`)
 
   // Partytown Config
-  if (partytown.config)
+  if (partytown.config && partytown.snippet !== 'inline')
     $('head').prepend(
       `<script>partytown={${inspect(partytown.config, {
         compact: true,
