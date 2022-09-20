@@ -14,15 +14,34 @@ npm i hexo-partytown # npm
 
 ```ts
 type HexoPartytownConfig = {
-  // [['^https:\/\/.+\.min\.js$', 'i']]
+  /**
+   * Script matching fields
+   * 
+   * @remarks
+   * If using an array, run as `new RegExp(arr[0], arr[1])`
+   * 
+   * @defaultValue `[['^https://.+.min.js$', 'i']]`
+   */
   match: (string | [string, string])[]
-  // 'html'
+  /**
+   * Script matching range
+   * @defaultValue `html`
+   */
   range: string
-  // 'inline'
+  /**
+   * Partytown Snippet
+   * @defaultValue `inline`
+   */
   snippet: string | false
-  // true
+  /**
+   * Copy Library Files
+   * @defaultValue `true`
+   */
   copylib: boolean
-  // undefined
+  /**
+   * Partytown Configuration
+   * @see {@link https://partytown.builder.io/configuration}
+   */
   config?: PartytownConfig
 }
 ```
