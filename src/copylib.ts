@@ -8,5 +8,5 @@ export const copyLib = () => {
   }: Hexo = this
   if (partytown.copylib)
     (async () =>
-      await copyLibFiles(resolve(join(public_dir, '~partytown'))))()
+      await copyLibFiles(resolve(join(public_dir, partytown.config.lib ?? '/~partytown/'))))()
 }
