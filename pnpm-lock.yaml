@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@builder.io/partytown': ^0.7.0
   '@types/cheerio': ^0.22.31
+  '@types/hexo': ^3.8.8
   '@types/node': ^18.7.16
   cheerio: 1.0.0-rc.12
   unbuild: ^0.8.10
@@ -13,6 +14,7 @@ dependencies:
 
 devDependencies:
   '@types/cheerio': 0.22.31
+  '@types/hexo': 3.8.8
   '@types/node': 18.7.16
   unbuild: 0.8.10
 
@@ -386,8 +388,24 @@ packages:
       picomatch: 2.3.1
     dev: true
 
+  /@types/bluebird/3.5.37:
+    resolution: {integrity: sha512-g2qEd+zkfkTEudA2SrMAeAvY7CrFqtbsLILm2dT2VIeKTqMqVzcdfURlvu6FU3srRgbmXN1Srm94pg34EIehww==}
+    dev: true
+
+  /@types/bunyan/1.8.8:
+    resolution: {integrity: sha512-Cblq+Yydg3u+sGiz2mjHjC5MPmdjY+No4qvHrF+BUhblsmSfMvsHLbOG62tPbonsqBj6sbWv1LHcsoe5Jw+/Ow==}
+    dependencies:
+      '@types/node': 18.7.16
+    dev: true
+
   /@types/cheerio/0.22.31:
     resolution: {integrity: sha512-Kt7Cdjjdi2XWSfrZ53v4Of0wG3ZcmaegFXjMmz9tfNrZSkzzo36G0AL1YqSdcIA78Etjt6E609pt5h1xnQkPUw==}
+    dependencies:
+      '@types/node': 18.7.16
+    dev: true
+
+  /@types/connect/3.4.35:
+    resolution: {integrity: sha512-cdeYyv4KWoEgpBISTxWvqYsVy444DOqehiF3fM3ne10AmJ62RSyNkUnxMJXHQWRQQX2eR94m5y1IZyDwBjV9FQ==}
     dependencies:
       '@types/node': 18.7.16
     dev: true
@@ -400,6 +418,28 @@ packages:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
     dev: true
 
+  /@types/hexo-util/0.6.5:
+    resolution: {integrity: sha512-iEu8Z9jCsc1HMdkRz9GXuBajNWNw0VjxGfNOZW3dJWjpp1geg0cGZRM9+DDiTwWMTgdGyUYflvzSlPWCTHRRGQ==}
+    dependencies:
+      '@types/node': 18.7.16
+    dev: true
+
+  /@types/hexo/3.8.8:
+    resolution: {integrity: sha512-xwe6UHW1rqMlawyfDSBBhI7s3tOmMHJFghklJ0SjabaQys7Yj/XCITUDLSGYG/SpvfDt+YTeVPWQ2Dt0LQiLTA==}
+    dependencies:
+      '@types/bluebird': 3.5.37
+      '@types/bunyan': 1.8.8
+      '@types/connect': 3.4.35
+      '@types/hexo-util': 0.6.5
+      '@types/minimist': 1.2.2
+      '@types/underscore': 1.11.4
+      moment: 2.29.4
+    dev: true
+
+  /@types/minimist/1.2.2:
+    resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
+    dev: true
+
   /@types/node/18.7.16:
     resolution: {integrity: sha512-EQHhixfu+mkqHMZl1R2Ovuvn47PUw18azMJOTwSZr9/fhzHNGXAJ0ma0dayRVchprpCj0Kc1K1xKoWaATWF1qg==}
     dev: true
@@ -408,6 +448,10 @@ packages:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
     dependencies:
       '@types/node': 18.7.16
+    dev: true
+
+  /@types/underscore/1.11.4:
+    resolution: {integrity: sha512-uO4CD2ELOjw8tasUrAhvnn2W4A0ZECOvMjCivJr4gA9pGgjv+qxKWY9GLTMVEK8ej85BxQOocUyE7hImmSQYcg==}
     dev: true
 
   /acorn/8.8.0:
@@ -1342,6 +1386,10 @@ packages:
       pathe: 0.3.7
       pkg-types: 0.3.5
       ufo: 0.8.5
+    dev: true
+
+  /moment/2.29.4:
+    resolution: {integrity: sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==}
     dev: true
 
   /mri/1.2.0:

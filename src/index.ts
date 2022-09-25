@@ -31,22 +31,12 @@ export type HexoPartytownConfig = {
   config?: PartytownConfig
 }
 
-export type Hexo = {
-  config: {
-    partytown: HexoPartytownConfig
-    public_dir: string
-  }
-  readonly extend: {
-    readonly filter: {
-      readonly register: (
-        type: string,
-        fn: (result: string, data: unknown) => string | void
-      ) => void
-    }
+declare module 'hexo' {
+  export interface HexoConfig {
+    readonly partytown?: HexoPartytownConfig
+    readonly public_dir: string
   }
 }
-
-declare const hexo: Hexo
 
 hexo.config.partytown = {
   match: [['^https://.+.min.js$', 'i']],
