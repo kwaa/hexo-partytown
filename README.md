@@ -43,6 +43,16 @@ type HexoPartytownConfig = {
 }
 ```
 
+Write into `_config.yml` to override default value.
+
+```yaml
+partytown:
+  config:
+    debug: true
+    forward:
+    - dataLayer.push
+```
+
 ## License
 
 Licensed under the [WTFPL](http://www.wtfpl.net), See the [COPYING](COPYING) file for more details.
