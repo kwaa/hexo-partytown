@@ -2,7 +2,7 @@ import type { Hexo } from './index'
 import { copyLibFiles } from '@builder.io/partytown/utils'
 import { resolve, join } from 'path'
 
-export const copyLib = () => {
+export function copyLib() {
   const {
     config: { partytown, public_dir },
   }: Hexo = this
