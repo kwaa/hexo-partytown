@@ -5,10 +5,7 @@ import { copyLib } from './copylib'
 export type HexoPartytownConfig = {
   /**
    * Script matching fields
-   * 
-   * @remarks
-   * If using an array, run as `new RegExp(arr[0], arr[1])`
-   * 
+   * @remarks If using an array, run as `new RegExp(arr[0], arr[1])`
    * @defaultValue `[['^https://.+.min.js$', 'i']]`
    */
   match: (string | [string, string])[]
