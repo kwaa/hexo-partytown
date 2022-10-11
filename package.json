@@ -43,13 +43,13 @@
     "watch": "unbuild --stub"
   },
   "dependencies": {
-    "@builder.io/partytown": "^0.7.0",
+    "@builder.io/partytown": "^0.7.1",
     "cheerio": "1.0.0-rc.12"
   },
   "devDependencies": {
     "@types/cheerio": "^0.22.31",
     "@types/hexo": "^3.8.8",
-    "@types/node": "^18.7.16",
-    "unbuild": "^0.8.10"
+    "@types/node": "^18.8.4",
+    "unbuild": "^0.8.11"
   }
 }
