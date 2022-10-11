@@ -38,7 +38,6 @@
     }
   },
   "scripts": {
-    "preinstall": "npx -y only-allow pnpm",
     "build": "unbuild",
     "watch": "unbuild --stub"
   },
